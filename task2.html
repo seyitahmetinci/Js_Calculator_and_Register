@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Functions and Arrays</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h4><a href="/index.html"> Func & Arrays </a></h4>
+        <ul class="nav__lists">
+            <li class="list__item"><a href="./index.html">Example 1</a></li>
+            <li class="list__item"><a href="./task2.html">Example 2</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form__area">
+          <form onsubmit="handleSubmit(event)">
+            <div class="form__group">
+                <label for="s__id">Student Id</label>
+                <input type="text" id="s__id" name="s__id" placeholder="Enter your id">
+            </div>
+            <div class="form__group">
+                <label for="f__name">Firstname</label>
+                <input type="text" id="name" name="name" placeholder="Enter your first name">
+            </div>
+            <div class="form__group">
+                <label for="initials">Initials</label>
+                <input type="text" id="initials" name="initials" placeholder="Enter your intials">
+            </div>
+            <div class="form__group">
+                <label for="l__name">Lastname</label>
+                <input type="text" id="l__name" name="l__name" placeholder="Enter your last name">
+            </div>
+            <div class="form__group">
+                <button type="submit">Submit</button>
+            </div>
+            
+        </form>  
+        </div>
+        <div class="preview" >
+            <h4>Preview</h4>
+            <hr>
+            <div class="preview__area" >
+                <div class="student_id">
+                    <p>Student Id:</p>
+                    <p id="sid"></p>
+                </div>
+                <div class="student_name">
+                    <p>Student Name:</p>
+                    <p id="snm"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        const getStudentId = () => {
+
+
+
+        }
+
+        const getStudentFname = () => {
+
+
+        }
+
+        const getStudentInitial = () => {
+
+
+        }
+
+        const getStudentLname = () => {
+
+
+        }
+
+
+        function welcome(){
+
+            console.log(welcomeF);
+            // window.alert(welcomeF);
+            return false; //To prevent it from going into next page.
+        }
+
+        const handleSubmit = (e) => {
+
+            var s__id = document.getElementById("s__id").value;
+            var f__name = document.getElementById("name").value;
+            var initials = document.getElementById("initials").value;
+            var l__name = document.getElementById("l__name").value;
+            var welcomeF = "Welcome " + s__id +" "+ f__name +" "+ initials +" "+ l__name;
+            console.log(welcomeF)
+            document.getElementById("sid").textContent = s__id;
+            document.getElementById("snm").textContent = f__name;
+            // It doesn't direct the page
+            e.preventDefault()
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

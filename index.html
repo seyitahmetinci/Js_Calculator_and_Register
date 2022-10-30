@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Functions and Arrays</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h4><a href="/index.html"> Func & Arrays </a></h4>
+        <ul class="nav__lists">
+            <li class="list__item"><a href="/index.html">Example 1</a></li>
+            <li class="list__item"><a href="/task2.html">Example 2</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="form__area2">
+            <form onsubmit="handleSubmit(event)">
+                <div class="form__group">
+                    <label for="fn1">First value</label>
+                    <input type="text" id="fn1" name="fn1" placeholder="Enter num 1">
+                </div>
+                <div class="form__group">
+                    <label for="logic">Actions</label>
+                    <select name="logic" id="logic" onchange="handleChange(event)">
+                        <option value="minus" selected>-</option>
+                        <option value="divide">/</option>
+                        <option value="multiply">*</option>
+                        <option value="add">+</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="fn2">Second value</label>
+                    <input type="text" id="fn2" name="fn2" placeholder="Enter num 2">
+                </div>
+                <div class="form__group">
+                    <label for="btn">Submit</label>
+                    <button id="btn" type="submit">
+                        =
+                    </button>
+                </div>
+                <div class="form__group">
+                    <label for="res">Result</label>
+                    <input type="text" id="res" name="res" >
+                </div>
+            </form>
+        </div>
+
+    </main>
+<script>
+function handleSubmit()
+{
+    event.preventDefault()
+var fn1= parseInt(document.getElementById("fn1").value);
+var fn2= parseInt(document.getElementById("fn2").value);
+var logic= document.getElementById("logic").value;
+var result= 0;
+if(logic== "add")
+{
+result= fn1+ fn2;
+}
+else if(logic== "minus")
+{
+result= fn1- fn2;
+}
+else if(logic== "multiply")
+{
+result= fn1* fn2;
+}
+else if(logic== "divide")
+{
+result= fn1/ fn2;
+}
+document.getElementById("res").value= result;
+
+}
+</script>
+</body>
+</html>
